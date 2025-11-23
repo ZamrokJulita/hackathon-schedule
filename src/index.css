@@ -1,0 +1,250 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #f3eaff;
+  background-color: #2a0d46;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #2a0d46;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  color: #f3eaff;
+}
+
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+}
+
+.app-header p {
+  margin-top: 8px;
+  color: #cbb8df;
+  font-size: 0.95rem;
+}
+
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px 12px;
+  margin-bottom: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab {
+  border: 1px solid #4b256b;
+  background: #3b1468;
+  color: #f3eaff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+    transform 0.1s ease;
+  flex-shrink: 0;
+}
+
+.tab:hover {
+  border-color: #a152ff;
+  transform: translateY(-1px);
+}
+
+.tab--active {
+  background: #7a2bc4;
+  border-color: #7a2bc4;
+  color: #ffffff;
+}
+
+.schedule {
+  background: #3b1468;
+  border-radius: 16px;
+  border: 1px solid #4b256b;
+  padding: 20px 16px;
+  box-shadow: 0 18px 45px rgba(10, 4, 20, 0.8);
+}
+
+.schedule-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: #f7ecff;
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #532c7a;
+}
+
+.schedule-item:first-child {
+  border-top: none;
+}
+
+.schedule-time {
+  font-weight: 600;
+  color: #c79bff;
+  font-size: 0.95rem;
+}
+
+.schedule-content h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.schedule-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.schedule-location {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #d3c3ea;
+}
+
+.badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.badge--scena {
+  background: rgba(122, 43, 196, 0.16);
+  border-color: rgba(122, 43, 196, 0.6);
+  color: #e5c9ff;
+}
+
+.badge--warsztat {
+  background: rgba(45, 212, 191, 0.12);
+  border-color: rgba(45, 212, 191, 0.5);
+  color: #c4fff5;
+}
+
+.badge--deadline {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #fed7d7;
+}
+
+.badge--posiłek,
+.badge--posilek {
+  background: rgba(250, 204, 21, 0.14);
+  border-color: rgba(250, 204, 21, 0.5);
+  color: #fef9c3;
+}
+
+.badge--organizacyjne {
+  background: rgba(192, 132, 252, 0.16);
+  border-color: rgba(192, 132, 252, 0.6);
+  color: #f3e8ff;
+}
+
+.badge--praca {
+  background: rgba(167, 84, 255, 0.16);
+  border-color: rgba(167, 84, 255, 0.6);
+  color: #e9d3ff;
+}
+
+.app-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #cbb8df;
+}
+
+.background-hackduck {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 190px;
+  opacity: 0.8;
+  pointer-events: none;
+  image-rendering: pixelated;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 16px 12px 80px;
+  }
+
+  .schedule {
+    padding: 16px 12px;
+    box-shadow: 0 10px 30px rgba(10, 4, 20, 0.9);
+  }
+
+  .schedule-item {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-time {
+    font-size: 0.9rem;
+  }
+
+  .schedule-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .background-hackduck {
+    width: 120px;
+    opacity: 0.75;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 12px 8px 72px;
+  }
+
+  .app-header p {
+    font-size: 0.85rem;
+  }
+
+  .tab {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .background-hackduck {
+    width: 90px;
+  }
+}
