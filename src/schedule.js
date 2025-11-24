@@ -1,7 +1,7 @@
 export const days = [
   {
     id: "day1",
-    label: "Dzień 1 – 28 listopada 2024",
+    label: "Dzień 1 – 28 listopada 2025",
     date: "2024-11-28",
     items: [
       { time: "08:15 - 09:00", title: "Odprawa drużyn", type: "organizacyjne" },
@@ -19,7 +19,7 @@ export const days = [
   },
   {
     id: "day2",
-    label: "Dzień 2 – 29 listopada 2024",
+    label: "Dzień 2 – 29 listopada 2025",
     date: "2024-11-29",
     items: [
       { time: "00:00 - 08:30", title: "Coding / czas na sen", type: "praca" },
