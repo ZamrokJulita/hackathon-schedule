@@ -5,9 +5,7 @@ export const days = [
     date: "2024-11-28",
     items: [
       { time: "08:15 - 09:00", title: "Odprawa drużyn", type: "organizacyjne" },
-      { time: "09:00 - 09:15", title: "Oficjalne rozpoczęcie", type: "organizacyjne" },
-      { time: "09:15 - 09:30", title: "Kilka słów od Gdańskiego Parku Naukowo-Technologicznego", type: "organizacyjne" },
-      { time: "09:30 - 09:45", title: "GCI jako partner główny – prezentacja", type: "organizacyjne" },
+      { time: "09:00 - 09:45", title: "Oficjalne rozpoczęcie", type: "organizacyjne" },
       { time: "09:45 - 10:00", title: "Wprowadzenie do zadania", type: "organizacyjne" },
       { time: "10:00 - 14:30", title: "Coding", type: "praca" },
       { time: "14:30 - 15:30", title: "Obiad", type: "posiłek" },
